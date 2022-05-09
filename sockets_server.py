@@ -17,4 +17,6 @@ class HiloCliente(threading.Thread):
             print ("del cliente",msg)
             self.socket.send(bytes(msg,'UTF-8'))
         print ("El cliente",ipCliente,"desconectado")
-        
+LOCALHOST = "poner ip"
+PORT = 8080
+ 
