@@ -15,4 +15,6 @@ class HiloCliente(threading.Thread):
             if msg = 'bye':
                 break
             print ("del cliente",msg)
-            
+            self.socket.send(bytes(msg,'UTF-8'))
+        print ("El cliente",ipCliente,"desconectado")
+        
