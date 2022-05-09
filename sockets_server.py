@@ -24,8 +24,9 @@ server.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR,1)
 server.bind ((host,PORT))
 print ("Server Iniciado")
 print ("Esperando Cliente")
-server.listen(1)
+
 while True: 
+    server.listen(1)
     clienteSock,ipCliente = server.accept()
     newthread = HiloCliente(target = ipCliente)
     newthread.start()
