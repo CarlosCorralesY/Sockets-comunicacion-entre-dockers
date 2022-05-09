@@ -8,4 +8,7 @@ class HiloCliente(threading.Thread):
        print("Nueva conexion",ipCliente)
     def run(self):
         print ("Conexion desde: ",ipCliente) 
-        
+        self.socket.send (bytes ("hola esto se envia desde el server", 'utf-8'))
+        msg=''
+        while True:
+            
