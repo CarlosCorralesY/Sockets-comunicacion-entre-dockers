@@ -19,4 +19,6 @@ class HiloCliente(threading.Thread):
         print ("El cliente",ipCliente,"desconectado")
 LOCALHOST = "poner ip"
 PORT = 8080
- 
+server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+server.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR,1)
+server.bind ((LOCALHOST,PORT))
