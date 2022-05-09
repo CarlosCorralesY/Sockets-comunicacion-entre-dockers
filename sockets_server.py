@@ -11,4 +11,8 @@ class HiloCliente(threading.Thread):
         self.socket.send (bytes ("hola esto se envia desde el server", 'utf-8'))
         msg=''
         while True:
+            data = self.csocket.recv(2048)
+            if msg = 'bye':
+                break
+            print ("del cliente",msg)
             
