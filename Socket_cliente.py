@@ -1,5 +1,5 @@
 import socket
-SERVER = "Direccion Server"
+SERVER = 'localhost'
 PORT = 8080
 client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 client.connect((SERVER,PORT))
